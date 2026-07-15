@@ -65,16 +65,6 @@ The controller utilizes a Gray-encoded FSM (`fsm_encoding = "gray"`) clocked on 
 | `SPI_slave_RAM` | `Design/top_module.v` | Top-level wrapper connecting `SPI_slave` to the RAM module |
 | `SPI_slave_RAM_tb` | `Testbench/top_module_tb.v` | Self-checking testbench exercising write-then-read operations |
 
-```text
-??? Design/
-?   ??? counter.v
-?   ??? SPI_Slave.v
-?   ??? single_port_RAM.v
-?   ??? top_module.v
-??? Testbench/
-?   ??? top_module_tb.v
-??? README.md
-```
 
 ## Tools & Verification
 
@@ -89,3 +79,6 @@ vlog +acc Design/counter.v Design/SPI_Slave.v Design/single_port_RAM.v Design/to
 vsim -voptargs=+acc work.SPI_slave_RAM_tb
 run -all
 ```
+
+
+
